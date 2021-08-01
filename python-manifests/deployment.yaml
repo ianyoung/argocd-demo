@@ -21,7 +21,7 @@ spec:
         app: python-helloworld
     spec:
       containers:
-      - image: inhaus/python-helloworld:vlatest 
+      - image: inhaus/python-helloworld:latest 
         imagePullPolicy: IfNotPresent
         name: python-helloworld
         resources:
