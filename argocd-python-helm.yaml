@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: python-helloworld 
+  name: python-helm
   namespace: argocd
 spec:
   destination:
@@ -12,6 +12,6 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-    path: helm-python-helloworld
+    path: python-helm
     repoURL: https://github.com/ianyoung/argocd-demo
     targetRevision: HEAD
