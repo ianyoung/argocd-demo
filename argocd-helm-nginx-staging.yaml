@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-alpine-helm
+  name: nginx-staging 
   namespace: argocd
 spec:
   destination:
@@ -9,9 +9,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    # path to the folder with the YAML manifests
+    helm:
+      valueFiles:
+      - values-staging.yaml
     path: nginx-helm
     repoURL: https://github.com/ianyoung/argocd-demo
     targetRevision: HEAD
-  # Sync policy
-  syncPolicy: {}
