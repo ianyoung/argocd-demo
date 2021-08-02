@@ -4,7 +4,7 @@ metadata:
   labels:
     app: nginx
     tag: alpine
-  name: nginx-alpine
+  name: nginx-alpine-helm
   namespace: {{ .Values.namespace.name }} 
 spec:
   replicas: {{ .Values.replicaCount }} 
@@ -26,6 +26,6 @@ spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        name: nginx-alpine
+        name: nginx-alpine-helm
         resources:
 {{ toYaml .Values.resources | indent 12 }}

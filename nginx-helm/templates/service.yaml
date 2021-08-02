@@ -4,7 +4,7 @@ metadata:
   labels:
     app: nginx
     tag: alpine
-  name: nginx-alpine
+  name: nginx-alpine-helm
   namespace: {{ .Values.namespace.name }} 
 spec:
   ports:

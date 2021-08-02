@@ -1,5 +1,5 @@
 namespace:
-  name: demo
+  name: helm-demo
  
 service:
   port: 8111
